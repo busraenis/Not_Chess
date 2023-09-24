@@ -1,0 +1,185 @@
+<html>
+<head>
+<link href="css/question.css" type="text/css" rel="stylesheet" />
+<title>Assignment (teaching.codes)</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h1>
+					Assignment 2: <br><br>
+					<code>Not Chess</code>
+				</h1>
+				<div>
+					Please read <a href="ReadMe.html">important information</a> first.
+				</div>
+				<div id="page1">
+					<h2>Description</h2>
+					<p>
+						&#8195;In this project, you will create a game based on chess with easier rules.<br>
+						&#8195;The game is played with chess pieces on the chessboard (8x8).<br>
+						&#8195;You will print the chess board and take the next move as input until the game is over.<br>
+						&#8195;Details are explained below.<br><br>
+						&#8195;If you have any questions regarding the assignment, please send an email to <b>cmpe150.mail@gmail.com</b> and<br>&#8195;use <b>Assignment-2</b> in subject.<br>
+						&#8195;<b>Reminder:</b> Discussing the ways to solve the problems in the assignments with each other is allowed, but<br>&#8195;code sharing is <b>strictly forbidden</b>.<br>
+					</p>
+					
+					<p>
+						<h2>Game Board</h2>
+						&#8195;You are expected to print the board and pieces as shown below (left).<br><br>
+						&#8195;<img src="ChessBoard.png"><br><br>
+						&#8195;Black pieces are shown as lowercase letters and white pieces are shown as uppercase letters. Each piece also has a value.<br>
+						&#8195;&#8195;
+						<table>
+							<tr class="header">
+								<td><b>Letter</b></td>
+								<td><b>Piece</b></td>
+								<td><b>Value</b></td>
+							</tr>
+							<tr>
+								<td style = "white-space: nowrap">
+								P or p
+								</td>
+								<td style = "white-space: nowrap">
+								Pawn
+								</td>
+								<td style = "white-space: nowrap">
+								1
+								</td>
+							</tr>
+							<tr>
+								<td style = "white-space: nowrap">
+								R or r
+								</td>
+								<td style = "white-space: nowrap">
+								Rook
+								</td>
+								<td style = "white-space: nowrap">
+								5
+								</td>
+							</tr>
+							<tr>
+								<td style = "white-space: nowrap">
+								N or n
+								</td>
+								<td style = "white-space: nowrap">
+								Knight
+								</td>
+								<td style = "white-space: nowrap">
+								3
+								</td>
+							</tr>
+							<tr>
+								<td style = "white-space: nowrap">
+								B or b
+								</td>
+								<td style = "white-space: nowrap">
+								Bishop
+								</td>
+								<td style = "white-space: nowrap">
+								3
+								</td>
+							</tr>
+							<tr>
+								<td style = "white-space: nowrap">
+								Q or q
+								</td>
+								<td style = "white-space: nowrap">
+								Queen
+								</td>
+								<td style = "white-space: nowrap">
+								9
+								</td>
+							</tr>						
+							<tr>
+								<td style = "white-space: nowrap">
+								K or k
+								</td>
+								<td style = "white-space: nowrap">
+								King
+								</td>
+								<td style = "white-space: nowrap">
+								999
+								</td>
+							</tr>
+
+						</table><br>
+					</p>
+					
+					
+					
+					
+					<p>
+					
+						
+						
+						
+						<h2>Game Rules</h2>
+						&#8195;Pieces move as they do in chess. You can find more information <a href="https://en.wikipedia.org/wiki/Chess#Movement">here</a> but you don't need to learn them for this assignment.<br>  
+						&#8195;You can assume that the players will move the pieces correctly.<br>
+						&#8195;White makes the first move.<br>
+						&#8195;Each player can only make 1 move on their turn.<br>
+						
+						
+						<h2>Inputs</h2>
+						&#8195;Player will enter the move as "piece_column piece_row new_column new_row" without the whitespaces.
+						An example move can be "e2e4" which takes the pawn on "e2" and moves it to "e4" for the board above.
+
+
+						<h2>Expected Move Controls</h2>
+						&#8195;You are expected to check the cases below for each move<br>
+						&#8195;After taking the move from player as an input<br>
+						&#8195;&#8195;#1- if the selected location ("e2" for move "e2e4") has no piece or the new location ("e4" for move "e2e4") has a same colored piece you should not accept the input<br>
+						&#8195;&#8195;#2- if enemy king is taken, the game is over<br>
+						&#8195;You are <b>NOT</b> expected to code any other scenario. Remember that this is not chess, just a chess inspired game.
+						
+						
+					</p>
+					
+					
+					
+					<p>
+						<h2>Outputs:</h2>
+						&#8195;You are expected to<br>
+						&#8195;&#8195;- Print the initial board (in Game Board section) before the first move.<br>
+						&#8195;&#8195;- Print the current board after each move.<br>
+						&#8195;&#8195;- Print "White's turn" or "Black's turn" after printing the board<br>
+						&#8195;&#8195;- Print "Invalid Move!" if there is an invalid move input (#1 in Expected Move Controls section) and take the input again.<br>
+						&#8195;&#8195;- Print the current score after each move (after printing the board, except for the first round). This score is calculated by adding the values of pieces for both players. White is positive and black is negative.<br>
+						&#8195;&#8195;- Print "GAME OVER!" and print the winner at the end as "WHITE WON!" or "BLACK WON!".<br><br>
+						&#8195;Check the example to have a better understanding.
+					</p>
+
+
+					<p>
+						Keep in mind that we will be grading your code not just based on these examples, but other cases as well,	so try to write code which can handle all possible cases.
+					</p>
+					<p>
+						<b>Warning:</b> You are not allowed to use any imports.<br>
+					</p><br>
+
+
+
+
+					<h2>Examples:</h2>
+					<table>
+						<tr class="header">
+							<td><b>Inputs</b></td>
+							<td><b>Output</b></td>
+						</tr>
+						<tr>
+							<td style = "vertical-align: top; white-space: nowrap">
+							<center>e2e4<br>d7d5<br>e4d5<br>a7a5<br>d5d6<br>a8b8<br>a7a6<br>a5a4<br>d6d7<br>a4a3<br>d7e8</center>
+							</td>
+							<td style = "white-space: nowrap">
+							<center><img src="Example.png"></center>
+							</td>
+						</tr>
+					</table><br>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
